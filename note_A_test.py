@@ -1,7 +1,4 @@
 #creating a program to learn where all the notes are in the guitar 
-print ("This is the Fretboard Master................................................................")
-print('Please ensure your guitar is in Standard Tuning, web app is not useful if instrument is not in standard tuning.')
-
 #declaring all the distinct notes in the guitar. I am declaring the notes of the guitar below.
 
 ''''
@@ -106,19 +103,19 @@ class A:
         loc_six = [10,2]
         loc_seven = [5,1]
 
-        quest_one = int(input("how many distinct locations of the note A, just before and in 12th fret:  "))
+        quest_one = int(input("how many distinct locations of the note A just before and in 12th fret:  "))
         if quest_one == distinct_positions:
             print("correct, next question")
         else:
             print("wrong, there are 7 distinct positions of the A Note before and just at the 12th fret")
         
         quest_two = str(input("What is the note always located before the A note:   "))
-        if quest_two == "Ab":
+        if quest_two == "Ab" and "G#":
             print("Correct")
             if quest_two == "Ab":
                 alt_ans = str(input("What is another name for Ab: "))
                 if alt_ans == "G#":
-                    print('correct')
+                    print("correct")
                 else:
                     print("wrong it is the G#")
             else:
@@ -126,19 +123,29 @@ class A:
         else:
             print("Incorrect.The note always before A is the Ab or the G#.")
 
+        quest_three = str(input("What is the note always located after the A note: "))
+        if quest_three == "A#" and "Bb":
+            print("Correct")
+            if quest_three == "A#":
+                alt_ans = str(input("What is another name for A#: "))
+                if alt_ans == "Bb":
+                    print("Correct")
+                else:
+                    print("The correct note is the Bb")
+            else:
+                print("Next question")
+        else:
+            print("Incorrect")
+
 
 
 if __name__ == '__main__':
+    print ("-------- FRETBOARD MASTER --------------")
+    print('Please ensure your guitar is in Standard Tuning, web app is not useful if instrument is not in standard tuning.')
     note = A()
     note.test_user()
-    print ('Thats all for the A note')
-
-
-
-
-
-
-
+    print("Thats all the questions")
+    
 
     
 
